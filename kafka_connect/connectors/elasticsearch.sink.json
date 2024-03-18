@@ -1,0 +1,13 @@
+{
+  "name": "elastisearch-connector",
+  "config": {
+    "topics": "mysql-server.kafka_db_example.messages",
+    "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
+    "connection.url": "http://kafka_elasticsearch:9200",
+    "type.name": "_doc",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false,
+    "schema.ignore": true,
+    "key.ignore": true
+  }
+}
